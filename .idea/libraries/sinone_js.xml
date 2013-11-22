@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="sinone-js" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/unitTests/lib/sinon-1.7.3.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/unitTests/lib/sinon-1.7.3.js" />
+    </CLASSES>
+    <DOCUMENTATION>
+      <root url="https://github.com/froots/jasmine-sinon" />
+    </DOCUMENTATION>
+    <SOURCES />
+  </library>
+</component>
