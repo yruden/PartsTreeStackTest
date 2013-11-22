@@ -6,7 +6,9 @@ define(['lo-dash'],function(_){
         this.collection = collection;
     };
 
-    minVal.prototype.isMin = function(){
+    minVal.prototype.getMin = function(){
         return _.min(this.collection);
     };
+
+    return minVal;
 });

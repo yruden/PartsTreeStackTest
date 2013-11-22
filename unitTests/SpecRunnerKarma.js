@@ -9,15 +9,31 @@ for (var file in window.__karma__.files) {
 
 requirejs.config({
     // Karma serves files from '/base'
-    baseUrl: '/base',
+    baseUrl: "/base",
 
     paths: {
-        'lo-dash': 'media/lib/lo-dash.2.3.2'
+        "lo-dash": "media/lib/lo-dash.2.3.2",
+        "jQuery": "media/lib/jquery-1.10.2.min",
+        "jquery-migrate": "media/lib/jquery-migrate-1.2.1.min",
+        "Backbone": "media/lib/backbone",
+        "Epoxy": "media/libbackbone.epoxy.min"
     },
 
     shim: {
-        'lo-dash': {
+        "lo-dash": {
             exports: '_'
+        },
+        "jQuery": {
+            exports: '$'
+        },
+        "jquery-migrate": {
+            deps: ["jQuery"]
+        },
+        "Backbone": {
+            exports: "Backbone"
+        },
+        "Epoxy": {
+            deps: ["backbone"]
         }
     },
 
