@@ -19,7 +19,8 @@ requirejs.config({
         "Epoxy": "src/libs/backbone.epoxy.min",
         "Bootstrap": "src/libs/bootstrap.min",
         "Bootstrap-datapicker": "src/libs/bootstrap-datepicker",
-        "EJS": "src/libs/ejs_production"
+        "EJS": "src/libs/ejs_production",
+        "text": "src/libs/text.js"
     },
 
     shim: {

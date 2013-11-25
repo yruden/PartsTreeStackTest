@@ -1,18 +1,50 @@
 require.config({
     baseUrl:"../",
     paths: {
-        'lo-dash': 'media_dev/js/libs/lo-dash.2.3.2'
+        "jQuery": "src/libs/jquery-1.10.2.min",
+        "jquery-migrate": "src/libs/jquery-migrate-1.2.1.min",
+        "lo-dash": "src/libs/lo-dash.2.3.2",
+        "Backbone": "src/libs/backbone",
+        "Epoxy": "src/libs/backbone.epoxy.min",
+        "Bootstrap": "src/libs/bootstrap.min",
+        "Bootstrap-datapicker": "src/libs/bootstrap-datepicker",
+        "EJS": "src/libs/ejs_production",
+        "text": "src/libs/text.js"
     },
 
     shim: {
-        'lo-dash': {
+        "lo-dash": {
             exports: '_'
+        },
+        "jQuery": {
+            exports: '$'
+        },
+        "jquery-migrate": {
+            deps: ["jQuery"]
+        },
+        "Backbone": {
+            exports: "Backbone",
+            deps: ["jQuery","lo-dash"]
+        },
+        "Epoxy": {
+            deps: ["backbone"]
+        },
+        "Bootstrap": {
+            deps: ["jQuery"]
+        },
+        "Bootstrap-datapicker": {
+            deps: ["Bootstrap"]
+        },
+        "EJS": {
+            exports: "EJS"
         }
     }
 });
 
 require([
-    "unitTests/suits/LogFormatterSpec"
+    "unitTests/suits/LogFormatterSpec",
+    "unitTests/suits/EpoxySpec",
+    "unitTests/suits/ValuesSpec"
 ],function() {
     var jasmineEnv = jasmine.getEnv();
     jasmineEnv.updateInterval = 1000;
