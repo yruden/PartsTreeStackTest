@@ -20,7 +20,12 @@ requirejs.config({
         "Bootstrap": "src/libs/bootstrap.min",
         "Bootstrap-datapicker": "src/libs/bootstrap-datepicker",
         "EJS": "src/libs/ejs_production",
-        "text": "src/libs/text.js"
+        "text": "src/libs/text"
+    },
+
+    text: {
+        //Valid values are 'node', 'xhr', or 'rhino'
+        env: 'rhino'
     },
 
     shim: {
