@@ -8,19 +8,20 @@ require.config({
         "jquery-migrate": "src/libs/jquery-migrate-1.2.1.min",
         "lo-dash": "src/libs/lo-dash.2.3.2",
         "Backbone": "src/libs/backbone",
-        "backbone-pageable": "src/libs/backbone-pageable",
+        "BackbonePageable": "src/libs/backbone-pageable",
         "Epoxy": "src/libs/backbone.epoxy.min",
         "Bootstrap": "src/libs/bootstrap.min",
         "Bootstrap-datapicker": "src/libs/bootstrap-datepicker",
         "EJS": "src/libs/ejs_production",
         "text": "src/libs/text",
         "Backgrid": "src/libs/backgrid-0.2.6/backgrid.min",
-        "Backgrid-filter": "src/libs/backgrid-0.2.6/extensions/filter/backgrid-filter.min",
-        "Backgrid-moment-cell": "src/libs/backgrid-0.2.6/extensions/moment-cell/backgrid-moment-cell.min",
-        "Backgrid-paginator": "src/libs/backgrid-0.2.6/extensions/paginator/backgrid-paginator.min",
-        "Backgrid-select2-cell": "src/libs/backgrid-0.2.6/extensions/select2-cell/backgrid-select2-cell.min",
-        "Backgrid-select-all": "src/libs/backgrid-0.2.6/extensions/select-all/backgrid-select-all.min",
-        "Backgrid-text-cell": "src/libs/backgrid-0.2.6/extensions/text-cell/backgrid-text-cell.min"
+        "BackgridFilter": "src/libs/backgrid-0.2.6/extensions/filter/backgrid-filter.min",
+        "BackgridMomentCell": "src/libs/backgrid-0.2.6/extensions/moment-cell/backgrid-moment-cell.min",
+        "BackgridPaginator": "src/libs/backgrid-0.2.6/extensions/paginator/backgrid-paginator",
+        "BackgridSelect2Sell": "src/libs/backgrid-0.2.6/extensions/select2-cell/backgrid-select2-cell.min",
+        "BackgridSelectAll": "src/libs/backgrid-0.2.6/extensions/select-all/backgrid-select-all.min",
+        "BackgridTextCell": "src/libs/backgrid-0.2.6/extensions/text-cell/backgrid-text-cell.min",
+        "lunr": "src/libs/lunr.min"
     },
     text: {
         //Valid values are 'node', 'xhr', or 'rhino'
@@ -41,10 +42,6 @@ require.config({
             deps: ["jQuery","lo-dash"],
             exports: "Backbone"
         },
-//        "backbone-pageable": {
-//            deps: ["lo-dash", "Backbone"],
-//            exports: "backbonePageable"
-//        },
         "Epoxy": {
             deps: ["Backbone"]
         },
@@ -61,23 +58,23 @@ require.config({
             exports: "Backgrid",
             deps: ["Backbone"]
         },
-        "Backgrid-filter": {
+        "BackgridFilter": {
+            deps: ["jQuery", "lo-dash","Backbone","Backgrid", "lunr"]
+        },
+        "BackgridMomentCell": {
             deps: ["Backgrid"]
         },
-        "Backgrid-moment-cell": {
-            deps: ["Backgrid"]
+        "BackgridPaginator": {
+            deps: ["jQuery", "lo-dash","Backbone","Backgrid"]
         },
-        "Backgrid-paginator": {
-            deps: ["Backgrid"]
+        "BackgridSelect2Cell": {
+            deps: ["jQuery", "lo-dash","Backbone","Backgrid"]
         },
-        "Backgrid-select2-cell": {
-            deps: ["Backgrid"]
+        "BackgridSelectAll": {
+            deps: ["jQuery", "lo-dash","Backbone","Backgrid"]
         },
-        "Backgrid-select-all": {
-            deps: ["Backgrid"]
-        },
-        "Backgrid-text-cell": {
-            deps: ["Backgrid"]
+        "BackgridTextCell": {
+            deps: ["jQuery", "lo-dash","Backbone","Backgrid"]
         }
     }
 });

@@ -8,8 +8,11 @@ define([
     "EJS",
     "text!templates/BodyTpl.html",
     "Backgrid",
-    "src/js/gridTemplates/TerritoriesGridColumns"
+    "src/js/gridTemplates/TerritoriesGridColumns",
+    "BackgridPaginator",
+    "BackgridFilter"
 ], function ($, _, Backbone, EJS, tpl, Backgrid, territoriesGridColumns) {
+    // "use stric";
 
     var BackgridView = Backbone.View.extend({
         el: "body",
@@ -30,14 +33,25 @@ define([
         },
 
         addGrid: function(territories){
+            // Render the grid
+            var $gridContainer = $("#example-grid");
+            $gridContainer.empty();
 
             // Set up a grid to use the pageable collection
             var grid = new Backgrid.Grid({
                 columns: territoriesGridColumns,
                 collection: territories
             });
-            // Render the grid
-            $("#example-grid").append(grid.render().$el);
+
+            $gridContainer.append(grid.render().$el);
+
+            // Initialize the paginator
+            var paginator = new Backgrid.Extension.Paginator({
+                collection: territories
+            });
+
+            // Render the paginator
+            $gridContainer.append(paginator.render().$el);
 
         }
     });

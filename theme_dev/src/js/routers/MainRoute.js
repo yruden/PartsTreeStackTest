@@ -4,7 +4,7 @@
 define([
     "src/js/views/BackgridView",
     "src/js/collections/PageableTerritories"
-], function (BackgridView, Territories) {
+], function (BackgridView, PageableTerritories) {
 
     var MainRoute = Backbone.Router.extend({
         routes: {
@@ -14,7 +14,7 @@ define([
 
         index: function(){
             var pageableTerritories = new PageableTerritories(),
-                backgridView = new BackgridView({collection: territories});
+                backgridView = new BackgridView({collection: pageableTerritories});
 
             pageableTerritories.fetch({reset: true});
         }
