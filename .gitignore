@@ -1,0 +1,8 @@
+#Webstorm files
+.idea/*
+
+#Sass cahce
+.sass-cache/*
+
+#coverage artifacts
+coverage/*
