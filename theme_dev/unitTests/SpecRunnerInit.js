@@ -3,8 +3,8 @@ require.config({
     paths: {
         "jQuery": "src/libs/jquery-1.10.2",
         "jquery-migrate": "src/libs/jquery-migrate-1.2.1",
-        "lo-dash": "src/libs/lo-dash.2.3.2",
-        "Backbone": "src/libs/backbone",
+        "underscore": "src/libs/lo-dash.2.3.2",
+        "backbone": "src/libs/backbone",
         "Epoxy": "src/libs/backbone.epoxy",
         "Bootstrap": "src/libs/bootstrap",
         "Bootstrap-datapicker": "src/libs/bootstrap-datepicker",
@@ -13,7 +13,7 @@ require.config({
     },
 
     shim: {
-        "lo-dash": {
+        "underscore": {
             exports: '_'
         },
         "jQuery": {
@@ -22,9 +22,9 @@ require.config({
         "jquery-migrate": {
             deps: ["jQuery"]
         },
-        "Backbone": {
+        "backbone": {
             exports: "Backbone",
-            deps: ["jQuery","lo-dash"]
+            deps: ["jQuery","underscore"]
         },
         "Epoxy": {
             deps: ["backbone"]

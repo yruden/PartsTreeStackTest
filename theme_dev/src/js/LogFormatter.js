@@ -1,4 +1,4 @@
-define(['lo-dash'], function (_) {
+define(['underscore'], function (_) {
     var parameterRegExp = /{(\d+)}/g,
         Formatter = function (template) {
             if (!template) throw new Error('template error should be supplied');

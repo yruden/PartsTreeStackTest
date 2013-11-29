@@ -1,7 +1,7 @@
 /**
  * Created by osavch on 22.11.13.
  */
-define(['lo-dash'],function(_){
+define(['underscore'],function(_){
     var minVal = function(collection){
         this.collection = collection;
     };
