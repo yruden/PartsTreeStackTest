@@ -13,9 +13,10 @@ define([
         },
 
         index: function(){
+            console.log('loaded...');
             var pageableTerritories = new PageableTerritories(),
                 backgridView = new BackgridView({collection: pageableTerritories});
-
+            console.log('loaded');
             pageableTerritories.fetch({reset: true});
         }
     });

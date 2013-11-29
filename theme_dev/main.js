@@ -14,7 +14,7 @@ require.config({
         "Bootstrap-datapicker": "src/libs/bootstrap-datepicker",
         "EJS": "src/libs/ejs_production",
         "text": "src/libs/text",
-        "Backgrid": "src/libs/backgrid-0.2.6/backgrid.min",
+        "Backgrid": "src/libs/backgrid-0.2.6/backgrid.ie8_fixed",
         "BackgridFilter": "src/libs/backgrid-0.2.6/extensions/filter/backgrid-filter.min",
         "BackgridMomentCell": "src/libs/backgrid-0.2.6/extensions/moment-cell/backgrid-moment-cell.min",
         "BackgridPaginator": "src/libs/backgrid-0.2.6/extensions/paginator/backgrid-paginator",
@@ -84,6 +84,7 @@ require([
     "src/js/routers/MainRoute",
     "Backgrid"
 ],function(Backbone, MainRoute, Backgrid) {
+    console.log('loaded...');
     new MainRoute();
     Backbone.history.start();
 });
