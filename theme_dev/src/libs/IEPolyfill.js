@@ -35,7 +35,11 @@ if (!Date.prototype.toISOString) {
 
     }() );
 }
-
+/**
+ * IE<9 doesn't have an .indexOf() function for Array, to define the exact spec version
+ * This is the version from MDC, used in Firefox/SpiderMonkey. In other cases such as IE,
+ * it'll add .indexOf() in the case it's missing...basically IE8 or below at this point.
+ */
 if (!Array.prototype.indexOf)
 {
     Array.prototype.indexOf = function(elt /*, from*/)
