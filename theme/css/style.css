@@ -13720,14 +13720,71 @@ div.star-rating {
   width: 100%;
 }
 
-/* line 1, d:/WebServers/home/localhost/www/PartsTreeStackTest/theme_dev/sass/widgets/_base.scss */
-h1 {
-  margin: 0;
-  padding: 2px;
+/* line 3, d:/WebServers/home/localhost/www/PartsTreeStackTest/theme_dev/sass/vars/_buttons.scss */
+button.btn.btn-custom-default {
+  color: #282828;
+  background-color: #d6d6d6;
+  -webkit-border-radius: 0px 0px;
+  -moz-border-radius: 0px / 0px;
+  border-radius: 0px / 0px;
 }
-/* line 4, d:/WebServers/home/localhost/www/PartsTreeStackTest/theme_dev/sass/widgets/_base.scss */
-h1 span {
-  display: block;
-  width: 23px;
-  color: #3f3f3f;
+
+/* line 8, d:/WebServers/home/localhost/www/PartsTreeStackTest/theme_dev/sass/vars/_buttons.scss */
+button.btn.btn-custom-default:hover {
+  background-color: #9a9b9d;
+}
+
+/* line 2, d:/WebServers/home/localhost/www/PartsTreeStackTest/theme_dev/sass/widgets/_base.scss */
+form label {
+  font-style: normal;
+}
+
+/* line 1, d:/WebServers/home/localhost/www/PartsTreeStackTest/theme_dev/sass/widgets/_singin_singout.scss */
+.form-container {
+  margin-top: 200px;
+}
+
+/* line 5, d:/WebServers/home/localhost/www/PartsTreeStackTest/theme_dev/sass/widgets/_singin_singout.scss */
+.fr-login-form {
+  background-color: #f9f9f9;
+}
+/* line 7, d:/WebServers/home/localhost/www/PartsTreeStackTest/theme_dev/sass/widgets/_singin_singout.scss */
+.fr-login-form .fr-form-container {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+/* line 11, d:/WebServers/home/localhost/www/PartsTreeStackTest/theme_dev/sass/widgets/_singin_singout.scss */
+.fr-login-form .fr-form-container form {
+  padding-left: 27px;
+  padding-right: 27px;
+}
+/* line 15, d:/WebServers/home/localhost/www/PartsTreeStackTest/theme_dev/sass/widgets/_singin_singout.scss */
+.fr-login-form .fr-form-container form h4 {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #282828;
+}
+/* line 20, d:/WebServers/home/localhost/www/PartsTreeStackTest/theme_dev/sass/widgets/_singin_singout.scss */
+.fr-login-form .fr-form-container form .fr-form-separator {
+  color: #9c9c9c;
+  font-size: 23pt;
+  padding: 0 8px;
+  margin: 0;
+  position: relative;
+  line-height: 0;
+  top: 7px;
+}
+/* line 29, d:/WebServers/home/localhost/www/PartsTreeStackTest/theme_dev/sass/widgets/_singin_singout.scss */
+.fr-login-form .fr-form-container form a {
+  color: #282828;
+  text-decoration: underline;
+  font-size: 12px;
+}
+/* line 34, d:/WebServers/home/localhost/www/PartsTreeStackTest/theme_dev/sass/widgets/_singin_singout.scss */
+.fr-login-form .fr-form-container form button.btn {
+  float: right;
+}
+/* line 39, d:/WebServers/home/localhost/www/PartsTreeStackTest/theme_dev/sass/widgets/_singin_singout.scss */
+.fr-login-form .fr-form-container .fr-form-create-account {
+  border-left: 1px solid #282828;
 }
