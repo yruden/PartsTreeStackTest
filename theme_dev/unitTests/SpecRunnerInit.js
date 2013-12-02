@@ -1,14 +1,14 @@
 require.config({
     baseUrl:"../",
     paths: {
-        "jQuery": "src/libs/jquery-1.10.2.min",
-        "jquery-migrate": "src/libs/jquery-migrate-1.2.1.min",
+        "jQuery": "src/libs/jquery-1.10.2",
+        "jquery-migrate": "src/libs/jquery-migrate-1.2.1",
         "lo-dash": "src/libs/lo-dash.2.3.2",
         "Backbone": "src/libs/backbone",
-        "Epoxy": "src/libs/backbone.epoxy.min",
-        "Bootstrap": "src/libs/bootstrap.min",
+        "Epoxy": "src/libs/backbone.epoxy",
+        "Bootstrap": "src/libs/bootstrap",
         "Bootstrap-datapicker": "src/libs/bootstrap-datepicker",
-        "EJS": "src/libs/ejs_production",
+        "EJS": "src/libs/ejs",
         "text": "src/libs/text.js"
     },
 
