@@ -1,8 +1,27 @@
-define(['backbone', 'underscore', 'jQuery','Epoxy'],function(Backbone, _, $){
+define([
+        "backbone",
+        "underscore",
+        "jQuery",
+        "src/js/errors/ArgumentNotDefinedError",
+        "Epoxy"],
+    function(
+        Backbone,
+        _,
+        $,
+        ArgumentNotDefinedError
+    ){
     return Backbone.Epoxy.View.extend({
-        constructor:function(){
+        constructor:function(options){
+            if(!options ) throw new ArgumentNotDefinedError("options");
+            if(!options.itemView){
+                throw new ArgumentNotDefinedError("options.itemView");
+            }
+            if(!options.collection){
+                throw new ArgumentNotDefinedError("options.collection");
+            }
+            this.itemView = options.itemView;
             var args = Array.prototype.slice.apply(arguments);
-            Backbone.Epoxy.View.constructor.apply(this, args);
+            Backbone.Epoxy.View.apply(this, args);
         }
     });
 });

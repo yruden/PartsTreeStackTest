@@ -41,6 +41,13 @@ require.config({
     }
 });
 
-require(['src/js/views/CollectionView','Bootstrap'], function(CollectionView){
-    var view = new CollectionView();
+require([
+        'src/js/views/CollectionView',
+        'src/js/views/ItemView',
+        'Bootstrap'
+    ], function(
+        CollectionView,
+        ItemView
+    ){
+    var collectionView = new CollectionView({itemView: ItemView});
 });

@@ -44,7 +44,8 @@ require.config({
 require([
     "unitTests/suits/LogFormatterSpec",
     "unitTests/suits/EpoxySpec",
-    "unitTests/suits/ValuesSpec"
+    "unitTests/suits/ValuesSpec",
+    "unitTests/suits/views/CollectionViewSpec"
 ],function() {
     var jasmineEnv = jasmine.getEnv();
     jasmineEnv.updateInterval = 1000;
