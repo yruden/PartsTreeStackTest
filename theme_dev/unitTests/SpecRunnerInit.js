@@ -42,10 +42,11 @@ require.config({
 });
 
 require([
-    "unitTests/suits/LogFormatterSpec",
-    "unitTests/suits/EpoxySpec",
-    "unitTests/suits/ValuesSpec",
-    "unitTests/suits/views/CollectionViewSpec"
+//    "unitTests/suits/LogFormatterSpec",
+//    "unitTests/suits/EpoxySpec",
+//    "unitTests/suits/ValuesSpec",
+//    "unitTests/suits/views/CollectionViewSpec"
+      "unitTests/suits/core/EventVentSpec"
 ],function() {
     var jasmineEnv = jasmine.getEnv();
     jasmineEnv.updateInterval = 1000;
