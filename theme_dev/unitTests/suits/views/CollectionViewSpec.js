@@ -4,7 +4,7 @@ define([
         "backbone",
         "src/js/views/CollectionView",
         "src/js/views/ItemView",
-        "src/js/errors/ArgumentNotDefinedError",
+        "src/js/errors/ArgumentNotDefinedError"
     ],
     function (
         $,
