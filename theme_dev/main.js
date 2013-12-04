@@ -6,9 +6,9 @@ require.config({
     paths: {
         "jQuery": "src/libs/jquery-1.10.2.min",
         "jquery-migrate": "src/libs/jquery-migrate-1.2.1.min",
-        "lo-dash": "src/libs/lo-dash.2.3.2",
-        "Backbone": "src/libs/backbone",
-        "BackbonePageable": "src/libs/backbone-pageable",
+        "underscore": "src/libs/lo-dash.2.3.2",
+        "backbone": "src/libs/backbone",
+        "backbonePageable": "src/libs/backbone-pageable",
         "Epoxy": "src/libs/backbone.epoxy.min",
         "Bootstrap": "src/libs/bootstrap.min",
         "Bootstrap-datapicker": "src/libs/bootstrap-datepicker",
@@ -25,11 +25,11 @@ require.config({
     },
     text: {
         //Valid values are 'node', 'xhr', or 'rhino'
-        env: 'rhino'
+        env: 'xhr'
     },
 
     shim: {
-        "lo-dash": {
+        "underscore": {
             exports: '_'
         },
         "jQuery": {
@@ -38,12 +38,12 @@ require.config({
         "jquery-migrate": {
             deps: ["jQuery"]
         },
-        "Backbone": {
-            deps: ["jQuery","lo-dash"],
+        "backbone": {
+            deps: ["jQuery","underscore"],
             exports: "Backbone"
         },
         "Epoxy": {
-            deps: ["Backbone"]
+            deps: ["backbone"]
         },
         "Bootstrap": {
             deps: ["jQuery"]
@@ -56,31 +56,31 @@ require.config({
         },
         "Backgrid": {
             exports: "Backgrid",
-            deps: ["Backbone"]
+            deps: ["backbone"]
         },
         "BackgridFilter": {
-            deps: ["jQuery", "lo-dash","Backbone","Backgrid", "lunr"]
+            deps: ["jQuery", "underscore","backbone","Backgrid", "lunr"]
         },
         "BackgridMomentCell": {
             deps: ["Backgrid"]
         },
         "BackgridPaginator": {
-            deps: ["jQuery", "lo-dash","Backbone","Backgrid"]
+            deps: ["jQuery", "underscore","backbone","Backgrid"]
         },
         "BackgridSelect2Cell": {
-            deps: ["jQuery", "lo-dash","Backbone","Backgrid"]
+            deps: ["jQuery", "underscore","backbone","Backgrid"]
         },
         "BackgridSelectAll": {
-            deps: ["jQuery", "lo-dash","Backbone","Backgrid"]
+            deps: ["jQuery", "underscore","backbone","Backgrid"]
         },
         "BackgridTextCell": {
-            deps: ["jQuery", "lo-dash","Backbone","Backgrid"]
+            deps: ["jQuery", "underscore","backbone","Backgrid"]
         }
     }
 });
 
 require([
-    "Backbone",
+    "backbone",
     "src/js/routers/MainRoute",
     "Backgrid"
 ],function(Backbone, MainRoute, Backgrid) {

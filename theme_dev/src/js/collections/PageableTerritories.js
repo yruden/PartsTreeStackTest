@@ -1,7 +1,7 @@
 /**
  * Created by osavch on 27.11.13.
  */
-define(["Backbone", "BackbonePageable", "src/js/models/Territorium"],function(Backbone, PageableCollection, Territorium){
+define(["backbone", "backbonePageable", "src/js/models/Territorium"],function(Backbone, PageableCollection, Territorium){
 
     var PageableTerritories = PageableCollection.extend({
         model: Territorium,

@@ -14,7 +14,7 @@
     }
     // AMD
     else if (typeof define == "function" && define.amd) {
-        define(["lo-dash", "Backbone"], factory);
+        define(["underscore", "backbone"], factory);
     }
     // Browser
     else if (typeof _ !== "undefined" && typeof Backbone !== "undefined") {

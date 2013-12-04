@@ -11,8 +11,8 @@
     // CommonJS
     if (typeof exports == "object") {
         module.exports = factory(module.exports,
-            require("lo-dash"),
-            require("Backbone"));
+            require("underscore"),
+            require("backbone"));
     }
     // Browser
     else if (typeof _ !== "undefined" &&

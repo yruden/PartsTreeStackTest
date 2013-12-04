@@ -1,7 +1,7 @@
 /**
  * Created by osavch on 26.11.13.
  */
-define(["src/js/models/GridModel", "src/js/collections/PartsGridCollection"], function (GridModel, PartsGridCollection) {
+define(["jQuery", "underscore", "backbone", "src/js/models/GridModel", "src/js/collections/PartsGridCollection"], function ($, _, Backbone, GridModel, PartsGridCollection) {
 
     describe('PartsGridCollectionSpec.js spec', function(){
         var partsGridCollection;

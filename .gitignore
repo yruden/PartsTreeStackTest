@@ -2,7 +2,7 @@
 .idea/**
 
 #Sass cahce
-.sass-cache/**
+**/.sass-cache/**
 
 #coverage artifacts
 **/coverage/**

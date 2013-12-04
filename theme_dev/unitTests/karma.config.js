@@ -13,9 +13,10 @@ module.exports = function (config) {
         files: [
             {pattern: 'src/libs/**/*.js', included: false},
             {pattern: 'src/js/**/*.js', included: false},
-            {pattern: 'templates/**/*.html', included: false},
+            {pattern: 'templates/**/*.*', included: false},
             {pattern: 'unitTests/libs/*.js', included: true},
             {pattern: 'unitTests/suits/**/*.js', included: false},
+            {pattern: 'unitTests/CustomJasmineMatchers/**/*.js', included: false},
             'unitTests/SpecRunnerKarma.js'
 
         ],

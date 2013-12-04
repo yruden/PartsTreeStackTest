@@ -3,8 +3,8 @@
  */
 define([
     "jQuery",
-    "lo-dash",
-    "Backbone",
+    "underscore",
+    "backbone",
     "src/js/views/BackgridView",
     "src/js/collections/Territories",
 ], function ($, _, Backbone, BackgridView, Territories) {

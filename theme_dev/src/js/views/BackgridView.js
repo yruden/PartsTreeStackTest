@@ -3,8 +3,8 @@
  */
 define([
     "jQuery",
-    "lo-dash",
-    "Backbone",
+    "underscore",
+    "backbone",
     "EJS",
     "text!templates/BodyTpl.html",
     "Backgrid",
