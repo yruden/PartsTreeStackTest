@@ -17,7 +17,7 @@ define(["underscore", "src/js/events/Event", "src/js/errors/ArgumentNotDefinedEr
 
     ventConstructor.prototype.trigger = function(eventType){
         if(! (eventType instanceof Event)){
-            throw new ArgumentNotDefinedError('triggered event is not of Event type or its successor');
+            throw new TypeError('triggered event is not of Event type or its successor');
         }
     };
 

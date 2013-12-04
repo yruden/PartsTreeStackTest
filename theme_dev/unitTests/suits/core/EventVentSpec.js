@@ -3,8 +3,9 @@ define([
     "underscore",
     "backbone",
     "src/js/core/EventVent",
-    "src/js/events/Event"
-], function ($, _, Backbone, EventVent, Event) {
+    "src/js/events/Event",
+    "unitTests/libs/CustomJasmineMatchers"
+], function ($, _, Backbone, EventVent, Event, CustomJasmineMatchers) {
     describe("EventVentSpec.js spec: EventVent should", function () {
         var eventVent;
 
@@ -19,15 +20,10 @@ define([
                     return function(){
                         eventVent.trigger(eventArg);
                     }
-                },
-                spy = sinon.spy(eventVent, "trigger");
-            try{
-                eventVent.trigger("eventName");
-            }
-            catch(e){}
-            expect(spy).toHaveThrown("TypeError");
-//            expect(triggerEvent(event)).not.toThrow();
-//            expect(triggerEvent(eventSuccessor)).not.toThrow();
+                };
+            expect(triggerEvent('eventName')).toThrowErrorType(TypeError);
+            expect(triggerEvent(event)).not.toThrow();
+            expect(triggerEvent(eventSuccessor)).not.toThrow();
 
         });
 
