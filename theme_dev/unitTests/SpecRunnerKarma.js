@@ -20,7 +20,7 @@ requirejs.config({
         "Bootstrap": "src/libs/bootstrap",
         "Bootstrap-datapicker": "src/libs/bootstrap-datepicker",
         "EJS": "src/libs/ejs",
-        "text": "src/libs/text.js"
+        "text": "src/libs/text"
     },
 
     shim: {

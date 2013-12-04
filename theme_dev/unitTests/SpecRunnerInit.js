@@ -9,7 +9,7 @@ require.config({
         "Bootstrap": "src/libs/bootstrap",
         "Bootstrap-datapicker": "src/libs/bootstrap-datepicker",
         "EJS": "src/libs/ejs",
-        "text": "src/libs/text.js"
+        "text": "src/libs/text"
     },
 
     shim: {
@@ -42,11 +42,12 @@ require.config({
 });
 
 require([
-//    "unitTests/suits/LogFormatterSpec",
-//    "unitTests/suits/EpoxySpec",
-//    "unitTests/suits/ValuesSpec",
-//    "unitTests/suits/views/CollectionViewSpec"
-      "unitTests/suits/core/EventVentSpec"
+    "unitTests/suits/LogFormatterSpec",
+    "unitTests/suits/EpoxySpec",
+    "unitTests/suits/ValuesSpec",
+    "unitTests/suits/views/CollectionViewSpec",
+    "unitTests/suits/views/ItemViewSpec",
+    "unitTests/suits/core/EventVentSpec"
 ],function() {
     var jasmineEnv = jasmine.getEnv();
     jasmineEnv.updateInterval = 1000;
