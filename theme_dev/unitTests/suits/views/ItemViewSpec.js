@@ -42,6 +42,20 @@ define([
                 expect(classof(itemView.el)).toBe('HTMLLIElement');
             });
 
+            it("to be render with template", function(){
+                itemView = {
+                    render: function(template){
+                        this.templste = template;
+                    }
+                };
+                spyOn(itemView, "render");
+                itemView.render("<h1>Test</h1>");
+
+                expect(itemView.render).toHaveBeenCalled();
+                expect(itemView.render.calls.length).toEqual(1);
+                expect(itemView.render).toHaveBeenCalledWith('<h1>Test</h1>');
+            });
+
         });
     });
 });

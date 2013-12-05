@@ -30,11 +30,17 @@ define([
 
         initialize: function(){
             this.collection.on('reset', this.render, this);
+            return this;
         },
 
         render: function(collection){
+            var itemTpl,
+                self = this;
 
-//            this.$el.append(this.itemView.el);
+            $.each(collection.toJSON(), function(key, obj){
+                itemTpl = new self.itemView({model: obj});
+                self.$el.append(itemTpl.el);
+            });
         }
     });
 });

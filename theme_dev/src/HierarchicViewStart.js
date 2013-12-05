@@ -9,7 +9,7 @@ require.config({
         "Bootstrap": "src/libs/bootstrap",
         "Bootstrap-datapicker": "src/libs/bootstrap-datepicker",
         "EJS": "src/libs/ejs",
-        "text": "src/libs/superClasstext.js"
+        "text": "src/libs/text"
     },
 
     shim: {
@@ -44,10 +44,15 @@ require.config({
 require([
         'src/js/views/CollectionView',
         'src/js/views/ItemView',
+        'src/js/collections/BrandCollection',
         'Bootstrap'
     ], function(
         CollectionView,
-        ItemView
+        ItemView,
+        BrandCollection
     ){
-    var collectionView = new CollectionView({itemView: ItemView});
+
+    var collection = new BrandCollection();
+    var collectionView = new CollectionView({itemView: ItemView, collection: collection});
+    collection.fetch({reset: true})
 });
