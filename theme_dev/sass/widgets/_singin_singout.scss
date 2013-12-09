@@ -1,0 +1,45 @@
+.form-container {
+  margin-top: 200px;
+}
+
+.fr-login-form {
+  background-color: $c-greed-odd;
+  .fr-form-container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    form {
+      padding-left: 27px;
+      padding-right: 27px;
+
+      h4 {
+        text-transform: uppercase;
+        font-weight: bold;
+        color: $c-black;
+      }
+      .fr-form-separator {
+        color: $c-disabled;
+        font-size: 23pt;
+        padding: 0 8px;
+        margin: 0;
+        position: relative;
+        line-height: 0;
+        top: 7px;
+      }
+      a {
+        color: $c-black;
+        text-decoration: underline;
+        font-size: 12px;
+      }
+      button.btn{
+        float: right;
+      }
+    }
+
+    .fr-form-create-account {
+      border-left: 1px solid $c-black;
+    }
+  }
+
+}
+

@@ -1,0 +1,10 @@
+@import "compass/css3/border-radius";
+
+button.btn.btn-custom-default {
+  color: $c-black;
+  background-color: $c-btn-bg;
+  @include border-radius(0px, 0px);;
+}
+button.btn.btn-custom-default:hover{
+  background-color: $c-btn-bg-hover;
+}

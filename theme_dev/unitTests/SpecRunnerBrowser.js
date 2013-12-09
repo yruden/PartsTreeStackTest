@@ -1,16 +1,5 @@
-var tests = [];
-for (var file in window.__karma__.files) {
-    if (window.__karma__.files.hasOwnProperty(file)) {
-        if (/Spec\.js$/.test(file)) {
-            tests.push(file);
-        }
-    }
-}
-
-requirejs.config({
-    // Karma serves files from '/base'
-    baseUrl: "/base",
-
+require.config({
+    baseUrl:"../",
     paths: {
         "jQuery": "src/libs/jquery-1.10.2",
         "jquery-migrate": "src/libs/jquery-migrate-1.2.1",
@@ -83,11 +72,47 @@ requirejs.config({
         "BackgridTextCell": {
             deps: ["jQuery", "underscore","backbone","Backgrid"]
         }
-    },
+    }
+});
 
-    // ask Require.js to load these files (all our tests)
-    deps: tests,
+require([
+    "unitTests/suits/views/CollectionViewSpec",
+    "unitTests/suits/views/ItemViewSpec",
+    "unitTests/suits/core/EventVentSpec",
 
-    // start test run, once Require.js is done
-    callback: window.__karma__.start
+    "unitTests/suits/collections/PartsGridCollectionSpec",
+    "unitTests/suits/collections/TerritoriesSpec",
+    "unitTests/suits/models/GridModelSpec",
+    "unitTests/suits/models/TerritoriumSpec",
+
+    "unitTests/suits/routers/mainRouteSpec",
+    "unitTests/suits/views/BackgridViewSpec"
+],function() {
+    var jasmineEnv = jasmine.getEnv();
+    jasmineEnv.updateInterval = 1000;
+
+    var htmlReporter = new jasmine.HtmlReporter();
+
+    jasmineEnv.addReporter(htmlReporter);
+
+    jasmineEnv.specFilter = function(spec) {
+        return htmlReporter.specFilter(spec);
+    };
+
+    if(IsWindowLoaded) {
+        execJasmine();
+        return;
+    }
+
+    var currentWindowOnload = window.onload;
+    window.onload = function() {
+        if (currentWindowOnload) {
+            currentWindowOnload();
+        }
+        execJasmine();
+    };
+
+    function execJasmine() {
+        jasmineEnv.execute();
+    }
 });

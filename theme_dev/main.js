@@ -1,28 +1,19 @@
-var tests = [];
-for (var file in window.__karma__.files) {
-    if (window.__karma__.files.hasOwnProperty(file)) {
-        if (/Spec\.js$/.test(file)) {
-            tests.push(file);
-        }
-    }
-}
-
-requirejs.config({
-    // Karma serves files from '/base'
-    baseUrl: "/base",
-
+/**
+ * Created by osavch on 26.11.13.
+ */
+require.config({
+    baseUrl:"",
     paths: {
-        "jQuery": "src/libs/jquery-1.10.2",
-        "jquery-migrate": "src/libs/jquery-migrate-1.2.1",
+        "jQuery": "src/libs/jquery-1.10.2.min",
+        "jquery-migrate": "src/libs/jquery-migrate-1.2.1.min",
         "underscore": "src/libs/lo-dash.2.3.2",
         "backbone": "src/libs/backbone",
-        "Epoxy": "src/libs/backbone.epoxy",
-        "Bootstrap": "src/libs/bootstrap",
-        "Bootstrap-datapicker": "src/libs/bootstrap-datepicker",
-        "EJS": "src/libs/ejs",
-        "text": "src/libs/text",
-
         "backbonePageable": "src/libs/backbone-pageable",
+        "Epoxy": "src/libs/backbone.epoxy.min",
+        "Bootstrap": "src/libs/bootstrap.min",
+        "Bootstrap-datapicker": "src/libs/bootstrap-datepicker",
+        "EJS": "src/libs/ejs_production",
+        "text": "src/libs/text",
         "Backgrid": "src/libs/backgrid-0.2.6/backgrid.ie8_fixed",
         "BackgridFilter": "src/libs/backgrid-0.2.6/extensions/filter/backgrid-filter.min",
         "BackgridMomentCell": "src/libs/backgrid-0.2.6/extensions/moment-cell/backgrid-moment-cell.min",
@@ -31,6 +22,10 @@ requirejs.config({
         "BackgridSelectAll": "src/libs/backgrid-0.2.6/extensions/select-all/backgrid-select-all.min",
         "BackgridTextCell": "src/libs/backgrid-0.2.6/extensions/text-cell/backgrid-text-cell.min",
         "lunr": "src/libs/lunr.min"
+    },
+    text: {
+        //Valid values are 'node', 'xhr', or 'rhino'
+        env: 'xhr'
     },
 
     shim: {
@@ -44,8 +39,8 @@ requirejs.config({
             deps: ["jQuery"]
         },
         "backbone": {
-            exports: "Backbone",
-            deps: ["jQuery","underscore"]
+            deps: ["jQuery","underscore"],
+            exports: "Backbone"
         },
         "Epoxy": {
             deps: ["backbone"]
@@ -59,8 +54,6 @@ requirejs.config({
         "EJS": {
             exports: "EJS"
         },
-
-
         "Backgrid": {
             exports: "Backgrid",
             deps: ["backbone"]
@@ -83,11 +76,15 @@ requirejs.config({
         "BackgridTextCell": {
             deps: ["jQuery", "underscore","backbone","Backgrid"]
         }
-    },
+    }
+});
 
-    // ask Require.js to load these files (all our tests)
-    deps: tests,
-
-    // start test run, once Require.js is done
-    callback: window.__karma__.start
+require([
+    "backbone",
+    "src/js/routers/MainRoute",
+    "Backgrid"
+],function(Backbone, MainRoute, Backgrid) {
+    console.log('loaded...');
+    new MainRoute();
+    Backbone.history.start();
 });
