@@ -5,12 +5,12 @@
 .fr-login-form {
   background-color: $c-greed-odd;
   .fr-form-container {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: $fr-container-padding-top;
+    padding-bottom: $fr-container-padding-bottom;
 
     form {
-      padding-left: 27px;
-      padding-right: 27px;
+      padding-left: $fr-padding-left;
+      padding-right: $fr-padding-right;
 
       h4 {
         text-transform: uppercase;
@@ -19,17 +19,17 @@
       }
       .fr-form-separator {
         color: $c-disabled;
-        font-size: 23pt;
-        padding: 0 8px;
+        font-size: $fr-form-sp-font-size;
+        padding: $fr-form-sp-padding;
         margin: 0;
         position: relative;
         line-height: 0;
-        top: 7px;
+        top: $fr-form-sp-top;
       }
       a {
         color: $c-black;
         text-decoration: underline;
-        font-size: 12px;
+        font-size: $fr-link-size;
       }
       button.btn{
         float: right;
