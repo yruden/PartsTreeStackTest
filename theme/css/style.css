@@ -13739,6 +13739,44 @@ form label {
   font-style: normal;
 }
 
+/* line 1, d:/WebServers/home/localhost/www/PartsTreeStackTest/theme_dev/sass/widgets/_brands_list.scss */
+ul.list-group {
+  width: 845px;
+}
+/* line 3, d:/WebServers/home/localhost/www/PartsTreeStackTest/theme_dev/sass/widgets/_brands_list.scss */
+ul.list-group li {
+  overflow: hidden;
+  width: 190px;
+  height: 68px;
+  display: inline-block;
+  margin: 5px;
+  list-style: none;
+  text-align: center;
+  position: relative;
+}
+/* line 12, d:/WebServers/home/localhost/www/PartsTreeStackTest/theme_dev/sass/widgets/_brands_list.scss */
+ul.list-group li div {
+  width: 100%;
+  line-height: 64px;
+  height: inherit;
+  position: relative;
+}
+/* line 17, d:/WebServers/home/localhost/www/PartsTreeStackTest/theme_dev/sass/widgets/_brands_list.scss */
+ul.list-group li div img {
+  vertical-align: middle;
+  position: relative;
+}
+/* line 21, d:/WebServers/home/localhost/www/PartsTreeStackTest/theme_dev/sass/widgets/_brands_list.scss */
+ul.list-group li div a {
+  display: block;
+  text-indent: -10000px;
+  z-index: 20;
+  position: absolute;
+  top: 0;
+  height: 66px;
+  width: 188px;
+}
+
 /* line 1, d:/WebServers/home/localhost/www/PartsTreeStackTest/theme_dev/sass/widgets/_singin_singout.scss */
 .form-container {
   margin-top: 200px;
@@ -13787,40 +13825,4 @@ form label {
 /* line 39, d:/WebServers/home/localhost/www/PartsTreeStackTest/theme_dev/sass/widgets/_singin_singout.scss */
 .fr-login-form .fr-form-container .fr-form-create-account {
   border-left: 1px solid #282828;
-}
-
-/* line 1, d:/WebServers/home/localhost/www/PartsTreeStackTest/theme_dev/sass/widgets/_brands_list.scss */
-ul.list-group {
-  width: 845px;
-}
-/* line 3, d:/WebServers/home/localhost/www/PartsTreeStackTest/theme_dev/sass/widgets/_brands_list.scss */
-ul.list-group li {
-  overflow: hidden;
-  width: 190px;
-  height: 68px;
-  display: inline-block;
-  margin: 5px;
-  list-style: none;
-  text-align: center;
-  position: relative;
-}
-/* line 12, d:/WebServers/home/localhost/www/PartsTreeStackTest/theme_dev/sass/widgets/_brands_list.scss */
-ul.list-group li div {
-  width: 100%;
-  line-height: 64px;
-  height: inherit;
-}
-/* line 16, d:/WebServers/home/localhost/www/PartsTreeStackTest/theme_dev/sass/widgets/_brands_list.scss */
-ul.list-group li div img {
-  vertical-align: middle;
-}
-/* line 19, d:/WebServers/home/localhost/www/PartsTreeStackTest/theme_dev/sass/widgets/_brands_list.scss */
-ul.list-group li div a {
-  display: block;
-  text-indent: -10000px;
-  z-index: 10;
-  position: absolute;
-  top: 0;
-  height: 66px;
-  width: 188px;
 }

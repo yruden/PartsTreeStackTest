@@ -13,8 +13,10 @@ ul.list-group {
       width: 100%;
       line-height: $item-height;
       height: inherit;
+      position: relative;
       img {
         vertical-align: middle;
+        position: relative;
       }
       a {
         display: block;
