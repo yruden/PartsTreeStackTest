@@ -1,0 +1,30 @@
+ul.list-group {
+  width: $item-column-width;
+  li {
+    overflow: hidden;
+    width: $block-width;
+    height: $block-height;
+    display: inline-block;
+    margin: $block-margin;
+    list-style: none;
+    text-align: center;
+    position: relative;
+    div {
+      width: 100%;
+      line-height: $item-height;
+      height: inherit;
+      img {
+        vertical-align: middle;
+      }
+      a {
+        display: block;
+        text-indent: $link-text-indent;
+        z-index: $block-z-index;
+        position: absolute;
+        top: 0;
+        height: $block-height - 2px;
+        width: $block-width - 2px;
+      }
+    }
+  }
+}
