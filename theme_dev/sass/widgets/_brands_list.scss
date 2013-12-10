@@ -13,19 +13,18 @@ ul.list-group {
       width: 100%;
       line-height: $item-height;
       height: inherit;
-      position: relative;
-      img {
-        vertical-align: middle;
-        position: relative;
-      }
       a {
         display: block;
-        text-indent: $link-text-indent;
         z-index: $block-z-index;
         position: absolute;
         top: 0;
         height: $block-height - 2px;
         width: $block-width - 2px;
+        font-size: 0px;
+        img {
+          text-indent: 0px;
+          vertical-align: middle;
+        }
       }
     }
   }

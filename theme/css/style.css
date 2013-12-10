@@ -13759,22 +13759,21 @@ ul.list-group li div {
   width: 100%;
   line-height: 64px;
   height: inherit;
-  position: relative;
 }
-/* line 17, d:/WebServers/home/localhost/www/PartsTreeStackTest/theme_dev/sass/widgets/_brands_list.scss */
-ul.list-group li div img {
-  vertical-align: middle;
-  position: relative;
-}
-/* line 21, d:/WebServers/home/localhost/www/PartsTreeStackTest/theme_dev/sass/widgets/_brands_list.scss */
+/* line 16, d:/WebServers/home/localhost/www/PartsTreeStackTest/theme_dev/sass/widgets/_brands_list.scss */
 ul.list-group li div a {
   display: block;
-  text-indent: -10000px;
   z-index: 20;
   position: absolute;
   top: 0;
   height: 66px;
   width: 188px;
+  font-size: 0px;
+}
+/* line 24, d:/WebServers/home/localhost/www/PartsTreeStackTest/theme_dev/sass/widgets/_brands_list.scss */
+ul.list-group li div a img {
+  text-indent: 0px;
+  vertical-align: middle;
 }
 
 /* line 1, d:/WebServers/home/localhost/www/PartsTreeStackTest/theme_dev/sass/widgets/_singin_singout.scss */
