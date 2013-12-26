@@ -1,0 +1,1 @@
+node tools/r.js -o build.json optimiztion=none

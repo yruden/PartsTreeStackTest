@@ -6,3 +6,5 @@
 
 #coverage artifacts
 **/coverage/**
+
+**/theme-build/**

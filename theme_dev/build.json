@@ -1,0 +1,16 @@
+{
+    "baseUrl": ".",
+    "mainConfigFile":"src/thirdParty.require.config.js",
+    "modules":[
+        {
+            "name":"src/thirdParty.js"
+        },
+        {
+            "name":"src/js/pages/main.js",
+            "exclude":["src/thirdParty.js"]
+
+        }
+    ],
+    "dir":"../theme_build",
+    "stubModules":["text"]
+}
