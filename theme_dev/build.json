@@ -1,16 +1,18 @@
 {
-    "baseUrl": ".",
+    "appDir":"./src",
+    "dir":"../theme_build/src",
+    "baseUrl": "../",
     "mainConfigFile":"src/thirdParty.require.config.js",
     "modules":[
         {
-            "name":"src/thirdParty.js"
+            "name":"src/thirdParty"
         },
         {
-            "name":"src/js/pages/main.js",
-            "exclude":["src/thirdParty.js"]
+            "name":"src/js/pages/main",
+            "exclude":["src/thirdParty"]
 
         }
     ],
-    "dir":"../theme_build",
+
     "stubModules":["text"]
 }

@@ -6,7 +6,7 @@ define([
     "underscore",
     "backbone",
     "EJS",
-    "text!templates/BodyTpl.html",
+    "text!src/templates/BodyTpl.html",
     "Backgrid",
     "src/js/gridTemplates/TerritoriesGridColumns",
     "BackgridPaginator",

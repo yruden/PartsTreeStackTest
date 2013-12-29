@@ -4,7 +4,7 @@ define(
         'underscore',
         'jQuery',
         'EJS',
-        "text!templates/BrandItem.html",
+        "text!src/templates/BrandItem.html",
         "src/js/errors/ArgumentNotDefinedError",
         'Epoxy'], function (Backbone, _, $, EJS, tpl, ArgumentNotDefinedError) {
 
